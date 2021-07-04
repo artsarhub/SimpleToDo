@@ -10,7 +10,7 @@
         <!--Задачи-->
         <scene sceneID="BiC-G5-FLF">
             <objects>
-                <tableViewController id="AY3-Ni-ZwH" customClass="MainTableViewController" customModule="SimpleToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TasksTable" id="AY3-Ni-ZwH" customClass="MainTableViewController" customModule="SimpleToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b4k-yW-vdr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,9 +39,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="hiO-G7-Bwm" kind="show" identifier="SubtasksSegue" id="4bY-lQ-NhP"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -60,50 +57,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0y-P0-Bed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-376" y="-334"/>
-        </scene>
-        <!--Подзадачи-->
-        <scene sceneID="UIC-VJ-hgk">
-            <objects>
-                <tableViewController id="hiO-G7-Bwm" customClass="SubtasksTableViewController" customModule="SimpleToDo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qXt-Yd-59r">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Subtask" textLabel="n0J-y3-LAe" style="IBUITableViewCellStyleDefault" id="qFJ-HW-v3c">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qFJ-HW-v3c" id="T8i-lT-G3g">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n0J-y3-LAe">
-                                            <rect key="frame" x="20" y="0.0" width="350" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hiO-G7-Bwm" id="uOm-lt-lcc"/>
-                            <outlet property="delegate" destination="hiO-G7-Bwm" id="LP2-Uh-HaX"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Подзадачи" id="lBr-Kh-sPA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4rt-T4-hLh">
-                            <connections>
-                                <action selector="onAddSubtaskButtonPushed:" destination="hiO-G7-Bwm" id="rvf-tb-s3a"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ytb-ri-QKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="543" y="-334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2YH-Jm-Jq3">

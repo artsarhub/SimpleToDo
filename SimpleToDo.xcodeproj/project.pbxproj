@@ -14,7 +14,6 @@
 		ACD99B4B2691E4F500FF53D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD99B492691E4F500FF53D5 /* LaunchScreen.storyboard */; };
 		ACD99B532691E59400FF53D5 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B522691E59400FF53D5 /* MainTableViewController.swift */; };
 		ACD99B562691E97100FF53D5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B552691E97100FF53D5 /* Task.swift */; };
-		ACD99B592691EBC700FF53D5 /* SubtasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B582691EBC700FF53D5 /* SubtasksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		ACD99B4C2691E4F500FF53D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACD99B522691E59400FF53D5 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		ACD99B552691E97100FF53D5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		ACD99B582691EBC700FF53D5 /* SubtasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtasksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				ACD99B522691E59400FF53D5 /* MainTableViewController.swift */,
-				ACD99B582691EBC700FF53D5 /* SubtasksTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,7 +160,6 @@
 				ACD99B3F2691E4F300FF53D5 /* AppDelegate.swift in Sources */,
 				ACD99B532691E59400FF53D5 /* MainTableViewController.swift in Sources */,
 				ACD99B412691E4F300FF53D5 /* SceneDelegate.swift in Sources */,
-				ACD99B592691EBC700FF53D5 /* SubtasksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

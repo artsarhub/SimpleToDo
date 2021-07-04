@@ -18,7 +18,9 @@ class MainTableViewController: UITableViewController {
         let submitAllertAction = UIAlertAction(title: "Добавить", style: .default) { action in
             guard let taskName = alertController.textFields?[0].text
             else { return }
-            self.tasks.append(Task(name: taskName))
+            let newTask = Task(name: taskName)
+            self.tasks.append(newTask)
+            self.task?.subtasks.append(newTask)
             self.tableView.reloadData()
         }
         alertController.addAction(cancelAlertAction)
@@ -26,6 +28,7 @@ class MainTableViewController: UITableViewController {
         present(alertController, animated: true)
     }
     
+    private var task: Task?
     private var tasks: [Task] = []
 
     override func viewDidLoad() {
@@ -87,9 +90,20 @@ class MainTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "TasksTable") as? MainTableViewController else { return }
+        
+        let task = tasks[indexPath.row]
+        vc.tasks = task.subtasks
+        vc.title = task.name
+        vc.task = task
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
     // MARK: - Navigation
 
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "SubtasksSegue",
             let controller = segue.destination as? SubtasksTableViewController,
@@ -98,5 +112,6 @@ class MainTableViewController: UITableViewController {
         
         controller.task = tasks[indexPath.row]
     }
+    */
 
 }
