@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		ACD99B3F2691E4F300FF53D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B3E2691E4F300FF53D5 /* AppDelegate.swift */; };
 		ACD99B412691E4F300FF53D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B402691E4F300FF53D5 /* SceneDelegate.swift */; };
-		ACD99B432691E4F300FF53D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B422691E4F300FF53D5 /* ViewController.swift */; };
 		ACD99B462691E4F300FF53D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD99B442691E4F300FF53D5 /* Main.storyboard */; };
 		ACD99B482691E4F500FF53D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD99B472691E4F500FF53D5 /* Assets.xcassets */; };
 		ACD99B4B2691E4F500FF53D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD99B492691E4F500FF53D5 /* LaunchScreen.storyboard */; };
+		ACD99B532691E59400FF53D5 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B522691E59400FF53D5 /* MainTableViewController.swift */; };
+		ACD99B562691E97100FF53D5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B552691E97100FF53D5 /* Task.swift */; };
+		ACD99B592691EBC700FF53D5 /* SubtasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99B582691EBC700FF53D5 /* SubtasksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACD99B3B2691E4F300FF53D5 /* SimpleToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD99B3E2691E4F300FF53D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD99B402691E4F300FF53D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACD99B422691E4F300FF53D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACD99B452691E4F300FF53D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACD99B472691E4F500FF53D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACD99B4A2691E4F500FF53D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACD99B4C2691E4F500FF53D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD99B522691E59400FF53D5 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		ACD99B552691E97100FF53D5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ACD99B582691EBC700FF53D5 /* SubtasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtasksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		ACD99B3D2691E4F300FF53D5 /* SimpleToDo */ = {
 			isa = PBXGroup;
 			children = (
+				ACD99B572691EBA400FF53D5 /* ViewControllers */,
+				ACD99B542691E96500FF53D5 /* Model */,
 				ACD99B3E2691E4F300FF53D5 /* AppDelegate.swift */,
 				ACD99B402691E4F300FF53D5 /* SceneDelegate.swift */,
-				ACD99B422691E4F300FF53D5 /* ViewController.swift */,
 				ACD99B442691E4F300FF53D5 /* Main.storyboard */,
 				ACD99B472691E4F500FF53D5 /* Assets.xcassets */,
 				ACD99B492691E4F500FF53D5 /* LaunchScreen.storyboard */,
 				ACD99B4C2691E4F500FF53D5 /* Info.plist */,
 			);
 			path = SimpleToDo;
+			sourceTree = "<group>";
+		};
+		ACD99B542691E96500FF53D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACD99B552691E97100FF53D5 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACD99B572691EBA400FF53D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACD99B522691E59400FF53D5 /* MainTableViewController.swift */,
+				ACD99B582691EBC700FF53D5 /* SubtasksTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD99B432691E4F300FF53D5 /* ViewController.swift in Sources */,
+				ACD99B562691E97100FF53D5 /* Task.swift in Sources */,
 				ACD99B3F2691E4F300FF53D5 /* AppDelegate.swift in Sources */,
+				ACD99B532691E59400FF53D5 /* MainTableViewController.swift in Sources */,
 				ACD99B412691E4F300FF53D5 /* SceneDelegate.swift in Sources */,
+				ACD99B592691EBC700FF53D5 /* SubtasksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
